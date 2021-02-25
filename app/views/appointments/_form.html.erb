@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :date %>
-    <%= form.date_select :date %>
+    <%= form.date_select :date, :start_year=>Date.today.year, :end_year=>Date.today.year+3  %>
   </div>
 
   <div class="field">
@@ -29,6 +29,16 @@
   <div class="field">
     <%= form.label :notes %>
     <%= form.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doctor %>
+    <%= collection_select(:appointment, :doctor_id, Doctor.all, :id, :name) %><br>
+  </div>
+
+  <div class="field">
+    <%= form.label :patient %>
+    <%= collection_select(:appointment, :patient_id, Patient.all, :id, :name) %><br>
   </div>
 
   <div class="actions">

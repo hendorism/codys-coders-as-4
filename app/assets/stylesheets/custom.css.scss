@@ -1,0 +1,39 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+    background-color: #4Db6aA !important;    
+}
+
+.navbar-brand {
+    font-size: 3rem;
+}
+
+.navbar h1 {
+    font-size: 3rem;
+    color: #b31343;
+}
+
+.navbar table {
+    background-color: #abcdef;
+    transition: background-color 0.7s;
+    table-layout: fixed;
+    width: 400px;
+}
+
+.navbar table:hover {
+    background-color: #ffffff;
+}
+
+.navbar table td {
+    border: 1px solid black;
+}
+
+.navbar table a {
+    color: #a32c9d;
+    padding: 3px;
+}
+
+.navbar table a:hover {
+    color: #fedcba;
+}
+

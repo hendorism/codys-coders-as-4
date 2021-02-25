@@ -3,6 +3,7 @@
   <head>
     <title>CodysCodersAs4</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://kit.fontawesome.com/e059fc66b3.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +12,24 @@
   </head>
 
   <body>
+  <div class="navbar">
+    <h1>Ruby Hospital</h1>
+    <i class="fas fa-ambulance fa-5x"></i>
+    <table>
+      <tr>
+        <td><%= link_to 'Book an appointment', new_appointment_path %></td>
+        <td><%= link_to 'Show all appointments', appointments_path %></td>
+      </tr>
+      <tr>
+        <td><%= link_to 'Recruit new doctor', new_doctor_path %></td>
+        <td><%= link_to 'Browse doctors', doctors_path %></td>
+      </tr>
+      <tr>
+        <td><%= link_to 'Register new patient', new_patient_path %></td>
+        <td><%= link_to 'Show all patients', patients_path %></td>
+      </tr>
+    </table>
+  </div>
     <%= yield %>
   </body>
 </html>

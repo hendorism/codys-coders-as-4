@@ -20,5 +20,15 @@
   <%= @appointment.notes %>
 </p>
 
+<p>
+  <strong>Doctor:</strong>
+  <%= @appointment.doctor.name %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @appointment.patient.name %>
+</p>
+
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
 <%= link_to 'Back', appointments_path %>
