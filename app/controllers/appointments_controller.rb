@@ -1,25 +1,20 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: %i[ show edit update destroy ]
 
-  # GET /appointments or /appointments.json
   def index
     @appointments = Appointment.all
   end
 
-  # GET /appointments/1 or /appointments/1.json
   def show
   end
 
-  # GET /appointments/new
   def new
     @appointment = Appointment.new
   end
 
-  # GET /appointments/1/edit
   def edit
   end
 
-  # POST /appointments or /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
 
@@ -34,7 +29,6 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /appointments/1 or /appointments/1.json
   def update
     respond_to do |format|
       if @appointment.update(appointment_params)
